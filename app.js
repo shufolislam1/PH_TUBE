@@ -32,13 +32,27 @@ const loadAll = (id)=>{
 
 }
 
+// load drawing
+const loadDrawing = ()=>{
+  const drawing = document.getElementById('drawing')
+  const card = document.createElement('div');
+  card.innerHTML=`<div>
+  <img style="width: 40px;
+  height: 40px;
+  flex-shrink: 0;
+  border-radius: 40px;
+background: url(<path-to-image>), lightgray 50% / cover no-repeat;" src="./Design in png/Icon.png" alt="" srcset="">
+</div>`
+drawing.appendChild(card)
+}
+
 
 const displayData = (data) => {
     const cardContainer = document.getElementById('card-container')
 
     // clearing already loaded data... (ei line tar jonno ami 2 ghonta boisa aasi. mane ami kotttttto boro ekta gadha)
     cardContainer.innerHTML = '';
-    // *********************8****8**8*****
+    // ********************************
     data.forEach(singelData => {
         // console.log(singelData.category_id);
         const card = document.createElement('div');
